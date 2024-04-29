@@ -11,30 +11,6 @@ namespace Nascar.Api.Controllers
     {
         private UserDAL dal = new UserDAL();
 
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<ResponseDto<User>>> UserGetById(int id)
-        //{
-        //    try
-        //    {
-        //        var result = await dal.GetById(id);
-        //        if (result.Errors != null)
-        //        {
-        //            return BadRequest(result);
-        //        }
-        //        return Ok(result);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var result = new ResponseDto<User>() 
-        //        {
-        //            Errors = new List<string> { ex.Message }
-        //        };
-        //        return NotFound(result);
-        //    }
-
-            
-        //}
-
         [HttpGet("{username}")]
         public async Task<ActionResult<ResponseDto<User>>> UserGetByUsername(string username)
         {
