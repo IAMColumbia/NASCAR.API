@@ -25,12 +25,7 @@ namespace Nascar.Api.DALs
         //Create the reference that will be used to connect to the db
         public string PrepareDBConnection()
         {
-            connectionBuilder!.DataSource = $"iamnascarapidb.database.windows.net"; //add db connection string here
-            connectionBuilder.IntegratedSecurity = true;
-            connectionBuilder.InitialCatalog = $"NASCAR";
-
-            //The string that is associated and will be used to reference/represent the DB connection
-            return connectionBuilder.ConnectionString;
+            return "Server=tcp:iamnascarapidb.database.windows.net,1433;Initial Catalog=NASCAR;Persist Security Info=False;User ID=DBA;Password=colum*999nascar!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         }
     }
 }
