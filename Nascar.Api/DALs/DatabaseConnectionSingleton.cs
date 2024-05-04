@@ -25,7 +25,7 @@ namespace Nascar.Api.DALs
         //Create the reference that will be used to connect to the db
         public string PrepareDBConnection()
         {
-            connectionBuilder!.DataSource = $"(localdb)\\MSSQLLocalDB"; //add db connection string here
+            connectionBuilder!.DataSource = $"iamnascarapidb.database.windows.net"; //add db connection string here
             connectionBuilder.IntegratedSecurity = true;
             connectionBuilder.InitialCatalog = $"NASCAR";
 
